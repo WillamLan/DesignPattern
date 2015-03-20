@@ -1,0 +1,5 @@
+<?xml version="1.0"?>  
+<config>  
+    <className>com.designpattern.creational.abstractfactorypattern.SpringSkinFactory</className>
+    <className>com.designpattern.creational.builderpattern.AngelBuilder</className>  
+</config>  
