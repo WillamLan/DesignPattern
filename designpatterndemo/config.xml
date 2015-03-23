@@ -2,4 +2,9 @@
 <config>  
     <className>com.designpattern.creational.abstractfactorypattern.SpringSkinFactory</className>
     <className>com.designpattern.creational.builderpattern.AngelBuilder</className>  
+    <className>com.designpattern.structural.adapterpattern.OperationAdapter</className>  
+     <!--RefinedAbstraction-->  
+    <className>com.designpattern.structural.bridgepattern.JPGImage</className>   
+    <!--ConcreteImplementor-->  
+    <className>com.designpattern.structural.bridgepattern.WindowsImp</className>  
 </config>  

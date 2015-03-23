@@ -1,7 +1,7 @@
 package com.designpattern.creational.builderpattern;
 
 //天使角色建造器：具体建造者
-class AngelBuilder extends ActorBuilder
+public class AngelBuilder extends ActorBuilder
 {
      public  void buildType()
      {

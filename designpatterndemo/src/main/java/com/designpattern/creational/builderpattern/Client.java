@@ -1,11 +1,12 @@
 package com.designpattern.creational.builderpattern;
+import com.designpattern.util.*;
 
 class Client
 {
        public  static void main(String args[])
        {
               ActorBuilder ab; //针对抽象建造者编程
-              ab =  (ActorBuilder)XMLUtil.getBean(); //反射生成具体建造者对象
+              ab =  (ActorBuilder)XMLUtil.getBean("ab"); //反射生成具体建造者对象
  
          ActorController ac = new  ActorController();
               Actor actor;
