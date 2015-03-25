@@ -15,7 +15,8 @@ public class XMLUtil {
             //创建文档对象  
             DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();  
             DocumentBuilder builder = dFactory.newDocumentBuilder();  
-            Document doc;                             
+            Document doc;    
+          //这个配置可以做成一个界面，来设置Config.xml中的className来决定使用来个具体实现。
             doc = builder.parse(new File("config.xml"));   
             NodeList nl=null;  
             Node classNode=null;  
