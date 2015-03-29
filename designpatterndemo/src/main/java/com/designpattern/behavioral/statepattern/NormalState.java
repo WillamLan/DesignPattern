@@ -9,7 +9,7 @@
  *
  */
 
-package com.designpattern.behavioral.strategypattern;
+package com.designpattern.behavioral.statepattern;
 
 /**
  * 类: NormalState <br>

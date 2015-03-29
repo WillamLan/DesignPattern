@@ -1,24 +1,24 @@
 /**  
  * 工程: designpatterndemo <br>
- * 标题: RestrictedState.java <br>
+ * 标题: OverdraftState.java <br>
  * 描述: TODO <br>
  * 作者: xiaoxiaolan <br>
- * 时间: 2015-3-29 下午6:50:52 <br>
+ * 时间: 2015-3-29 下午6:50:10 <br>
  * 版权: Copyright 2015 1000CHI Software Technology Co.,Ltd. <br>
  * All rights reserved.
  *
  */
 
-package com.designpattern.behavioral.strategypattern;
+package com.designpattern.behavioral.statepattern;
 
 /**
- * 类: RestrictedState <br>
- * 描述: 受限状态：具体状态类 <br>
+ * 类: OverdraftState <br>
+ * 描述: 透支状态：具体状态类 <br>
  * 作者: xiaoxiaolan <br>
- * 时间: 2015-3-29 下午6:50:52
+ * 时间: 2015-3-29 下午6:50:10
  */
-class RestrictedState extends AccountState{
-	public RestrictedState(AccountState state) {  
+class OverdraftState extends AccountState{
+	public OverdraftState(AccountState state) {  
         this.acc = state.acc;  
     }  
       
@@ -28,7 +28,8 @@ class RestrictedState extends AccountState{
     }  
       
     public void withdraw(double amount) {  
-        System.out.println("帐号受限，取款失败");  
+        acc.setBalance(acc.getBalance() - amount);  
+        stateCheck();  
     }  
       
     public void computeInterest() {  
@@ -37,11 +38,14 @@ class RestrictedState extends AccountState{
       
     //状态转换  
     public void stateCheck() {  
-        if(acc.getBalance() > 0) {  
+        if (acc.getBalance() > 0) {  
             acc.setState(new NormalState(this));  
         }  
-        else if(acc.getBalance() > -2000) {  
-            acc.setState(new OverdraftState(this));  
+        else if (acc.getBalance() == -2000) {  
+            acc.setState(new RestrictedState(this));  
+        }  
+        else if (acc.getBalance() < -2000) {  
+            System.out.println("操作受限！");  
         }  
     }  
 }
