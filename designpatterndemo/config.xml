@@ -6,5 +6,6 @@
      <!--RefinedAbstraction-->  
     <className>com.designpattern.structural.bridgepattern.JPGImage</className>   
     <!--ConcreteImplementor-->  
-    <className>com.designpattern.structural.bridgepattern.WindowsImp</className>  
+    <className>com.designpattern.structural.bridgepattern.WindowsImp</className> 
+    <className>com.designpattern.behavioral.strategypattern.StudentDiscount</className> 
 </config>  

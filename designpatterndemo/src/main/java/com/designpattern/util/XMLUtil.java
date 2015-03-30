@@ -36,6 +36,8 @@ public class XMLUtil {
 			} else if (args.equals("os")) {
 				// 获取第二个包含类名的节点，即具体实现类
 				classNode = nl.item(4).getFirstChild();
+			} else if(args.equals("bs")){
+				classNode = nl.item(5).getFirstChild();
 			}
               
              cName=classNode.getNodeValue();  
