@@ -39,6 +39,12 @@ public class XMLUtil {
 			} else if(args.equals("bs")){
 				classNode = nl.item(5).getFirstChild();
 			}
+			else if(args.equals("rp")){
+				classNode = nl.item(6).getFirstChild();
+			}
+			else if(args.equals("HR")){
+				classNode = nl.item(7).getFirstChild();
+			}
               
              cName=classNode.getNodeValue();  
              //通过类名生成实例对象并将其返回  

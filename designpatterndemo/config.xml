@@ -8,4 +8,6 @@
     <!--ConcreteImplementor-->  
     <className>com.designpattern.structural.bridgepattern.WindowsImp</className> 
     <className>com.designpattern.behavioral.strategypattern.StudentDiscount</className> 
+    <className>com.designpattern.behavioral.templatepattern.RedVideoPhoneTemplate</className> 
+     <className>com.designpattern.behavioral.visitorpattern.HRDepartment</className> 
 </config>  

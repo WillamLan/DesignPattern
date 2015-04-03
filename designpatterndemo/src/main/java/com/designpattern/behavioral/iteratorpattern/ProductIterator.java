@@ -20,7 +20,8 @@ import java.util.List;
  * 时间: 2015-3-29 下午12:45:14
  */
 class ProductIterator implements AbstractIterator {  
-    private ProductList productList;  
+    @SuppressWarnings("unused")
+	private ProductList productList;  
     private List<?> products;  
     private int cursor1; //定义一个游标，用于记录正向遍历的位置  
     private int cursor2; //定义一个游标，用于记录逆向遍历的位置  
